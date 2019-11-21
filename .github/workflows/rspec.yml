@@ -22,8 +22,10 @@ jobs:
 
     - name: Install gems
       run: |
+        cd bin
         gem install bundler
 
     - name: Run specs
       run: |
+        cd bin
         bundle exec rspec
