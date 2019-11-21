@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require File.join(".", File.dirname(__FILE__), "pipeline")
+
+def main(cluster)
+  log("green", "planning for cluster #{cluster}")
+
+  set_kube_context(cluster)
+  plan_namespaces(cluster)
+
+  log("green", "Done.")
+end
+
+def plan_namespaces(cluster)
+  changed_namespace_dirs_for_plan(cluster).each do |namespace_dir|
+    plan_namespace_dir(cluster, namespace_dir)
+  end
+end
+
+main ENV.fetch("PIPELINE_CLUSTER")
