@@ -24,6 +24,7 @@ jobs:
       run: |
         cd bin
         gem install bundler
+        bundle install
 
     - name: Run specs
       run: |
