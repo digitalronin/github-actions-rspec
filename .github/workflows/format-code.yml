@@ -1,6 +1,4 @@
-on:
-  pull_request:
-    types: [opened, edited, reopened, synchronize]
+on: push
 
 jobs:
   format-code:
