@@ -6,4 +6,3 @@ def foo
 
   "something"
 end
-
