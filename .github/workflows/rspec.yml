@@ -3,10 +3,10 @@ name: Rspec Tests
 on:
   pull_request:
     branches:
-      - 'master'
+      - 'masterx'
   push:
     branches:
-      - 'master'
+      - 'masterx'
 
 jobs:
   build:
